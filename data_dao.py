@@ -16,7 +16,8 @@ def query(query):
 
 class Client(): #objeto cliente --> parâmetros r = read, w = write, a = para adicionar dados ao arquivo
     def le(cpf_num):
-        query(f'SELECT nome, cpf, saldo FROM main WHERE cpf={cpf_num};')
+        data = query(f'SELECT nome, cpf, saldo FROM main WHERE cpf={cpf_num};')
+        print(data)
 
     def escreve():
         nome = input('Nome do cliente: ')
@@ -24,8 +25,8 @@ class Client(): #objeto cliente --> parâmetros r = read, w = write, a = para ad
         saldo = float(input('Valor de depósito: R$'))
         registro = query(f'INSERT INTO main (nome, cpf, saldo) VALUES ("{nome}",{cpf},{saldo})')
         if registro != 0:
-            print('\nRegistro inserido com sucesso!!\n\n\n')
+            print('\n\033[1;32mRegistro inserido com sucesso!!\033[;0m\n\n\n')
         else:
-            print('\nFalha ao inserir registro.\n\nTente novamente\n\n')
+            print('\n\033[1;31mFalha ao inserir registro.\033[;0m\n\nTente novamente\n\n')
             Client.escreve()
         
