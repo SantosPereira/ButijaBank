@@ -12,8 +12,7 @@ def query(query):
     db_cursor.execute(sql)
     data = db_cursor.fetchall()
     db_access.commit()
-    return data #db_cursor.rowcount, 
-
+    return data
 
 class Client(): #objeto cliente --> parâmetros r = read, w = write, a = para adicionar dados ao arquivo
     def le(cpf_num):
@@ -24,10 +23,9 @@ class Client(): #objeto cliente --> parâmetros r = read, w = write, a = para ad
         nome = input('Nome do cliente: ')
         cpf = int(input('Digite o CPF do cliente (apenas números): '))
         saldo = float(input('Valor de depósito: R$'))
-        registro = query(f'INSERT INTO main (nome, cpf, saldo) VALUES ("{nome}",{cpf},{saldo})')
-        '''if registro != 0:
+        try:
+            query(f'INSERT INTO main (nome, cpf, saldo) VALUES ("{nome}",{cpf},{saldo})')
             print('\n\033[1;32mRegistro inserido com sucesso!!\033[;0m\n\n\n')
-        else:
-            print('\n\033[1;31mFalha ao inserir registro.\033[;0m\n\nTente novamente\n\n')
+        except:
+            print('\n\033[1;31mFalha ao inserir registro.\033[;0m\nTente novamente\n\n')
             Client.escreve()
-        '''
