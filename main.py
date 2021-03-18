@@ -26,7 +26,9 @@ e para acessar o painel de controle digite [\033[;031m9\033[;0m] em seguida a se
     elif operação == 9:
         pwdAccess = int(input('Senha de acesso: '))
         if pwdAccess == 00000:
-            print(query('SELECT * FROM main;'))
+            data = query('SELECT * FROM main;')
+            for i in range(len(data)):
+                print(data[i])
     else:
         print('Erro! Digite uma opção válida')
         get()
