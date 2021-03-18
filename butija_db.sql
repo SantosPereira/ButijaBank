@@ -4,7 +4,8 @@ USE butija_db;
 
 CREATE TABLE main (
     nome varchar(150),
-    cpf integer(11),
-    saldo double(102,2)
+    cpf bigint(11),
+    saldo double(102,2),
+    PRIMARY KEY (cpf)
 ) CHARACTER SET utf8;
 

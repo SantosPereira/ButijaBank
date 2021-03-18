@@ -1,3 +1,4 @@
+from client import Client
 import data_dao as sql
 import GUI
 
@@ -10,36 +11,18 @@ print('''\033[1;32m██████╗░██╗░░░██╗███�
 \033[1;32m██████╦╝╚██████╔╝░░░██║░░░██║╚█████╔╝██║░░██║  ██████╦╝██║░░██║██║░╚███║██║░╚██╗  ██████╔╝██╔╝░░░██║░░██║\033[0;0m
 \033[1;32m╚═════╝░░╚═════╝░░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚═╝  ╚═════╝░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚═╝  ╚═════╝░╚═╝░░░░╚═╝░░╚═╝\033[0;0m\n\n\n\n''')
 
-# GUI.janela('Qualquer coisa\nSomente para teste!')
-# open("ClientData.txt",'a', encoding="utf8")
-
-
-
-
-
-def Client_request(y): #função para acessar dados dos clientes  #y = r ou w  #read ou write
-    if y == 'r':
-        x = int(input('Número do CPF para a consulta: '))
-        doc = str(open("ClientData.txt", 'r'))
-        x = doc.find(str(x))
-        print(x)
-        Client.Nome('r',x)
-        Client.CPF('r',x)
-        Client.Saldo('r',x)
-       
-    if y == 'w':
-        Client.Nome('w',0)
-        Client.CPF('w',0)
-        Client.Saldo('w',0)
-
-def fsemnome(): #funcao sem nome e que serve pra chamar as outras passando o parametro adequado
-    operação = int(input('\nQual operação bancária deseja realizar?\nExtração de saldo ou depósito?\nPara extração de saldo digite [0], para depósito digite [1]\ne para acessar o painel de controle digite [9] em seguida a senha de acesso\n\n\n\n>>'))
-    print('\n')
+        
+def get(): #funcao gatilho e que serve pra chamar as outras passando o parametro adequado #função para acessar dados dos clientes  #y = r ou w  #read ou write
+    operação = int(input('''\nQual operação bancária deseja realizar?
+Extração de saldo ou depósito?
+Para extração de saldo digite [\033[;031m0\033[;0m], para depósito digite [\033[;031m1\033[;0m]
+e para acessar o painel de controle digite [\033[;031m9\033[;0m] em seguida a senha de acesso\n\n\n\n>>'''))
     if operação == 0:
-        Client_request('r')
-
+        cpf_num = int(input('Digite o número do CPF para a consulta: '))
+        Client.le(cpf_num)
+       
     elif operação == 1:
-        Client_request('w')
+        Client.escreve()
 
     elif operação == 9:
         pwAcess = int(input('Senha de acesso: '))
@@ -49,9 +32,9 @@ def fsemnome(): #funcao sem nome e que serve pra chamar as outras passando o par
 
     else:
         print('Erro! Digite uma opção válida')
-        fsemnome()
+        get()
 
-fsemnome()
+get()
 
 
 # print(sql.query.rowcount, 'registros Inseridos\n\n\n')
