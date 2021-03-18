@@ -1,4 +1,4 @@
-import data_dao as sql
+'''import data_dao as sql
 
 
 class Client(): #objeto cliente --> parâmetros r = read, w = write, a = para adicionar dados ao arquivo
@@ -9,5 +9,5 @@ class Client(): #objeto cliente --> parâmetros r = read, w = write, a = para ad
         nome = input('Nome do cliente: ')
         cpf = int(input('Digite o CPF do cliente (apenas números): '))
         saldo = float(input('Valor de depósito: R$'))
-
         sql.query(f'INSERT INTO main (nome, cpf, saldo) VALUES ("{nome}",{cpf},{saldo})')
+        '''

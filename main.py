@@ -1,5 +1,4 @@
-from client import Client
-import data_dao as sql
+from data_dao import Client
 import GUI
 
 
