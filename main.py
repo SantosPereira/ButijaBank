@@ -1,4 +1,4 @@
-from data_dao import Client, query
+from API.data_dao import Client, query
 import GUI
 
 msg = {
