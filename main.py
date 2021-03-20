@@ -1,5 +1,4 @@
 from API.data_dao import Client, query
-import GUI
 
 msg = {
     'ajuda':'''\nQual operação bancária deseja realizar?\nExtração de saldo ou depósito?''',
