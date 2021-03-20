@@ -1,0 +1,8 @@
+#titulo {
+    margin-right: 5em;
+    padding-left: 1%;
+    font: 60px 'Segoe UI';
+    color: rgb(240, 81, 18);
+    background-color:rgb(18, 18, 151);
+    border-radius: 7px;
+}
