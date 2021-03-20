@@ -25,14 +25,15 @@ class Client(): #objeto cliente --> parâmetros r = read, w = write, a = para ad
         # print(f'\033[;035m{data}\033[;0m')
 
     def escreve():
-        nome = input('Nome do cliente: ')
-        cpf = int(input('Digite o CPF do cliente (apenas números): '))
-        saldo = float(input('Valor de depósito: R$'))
+        nome = input('Nome do cliente: \033[;034m')
+        cpf = int(input('\033[;0mDigite o CPF do cliente (apenas números): \033[;034m'))
+        saldo = float(input('\033[;0mValor de depósito: \033[;034mR$'))
+        print('\033[;0m')
         try:
             query(f'INSERT INTO main (nome, cpf, saldo) VALUES ("{nome}",{cpf},{saldo})')
             print('\n\033[1;32mRegistro inserido com sucesso!!\033[;0m\n\n\n')
             if input():
                 import main
-        except:
-            print('\n\033[1;31mFalha ao inserir registro.\033[;0m\nTente novamente\n\n')
+        except ValueError:
+            print(f'\n\033[1;31mFalha ao inserir registro.\n({ValueError})\033[;0m\nTente novamente\n\n')
             Client.escreve()

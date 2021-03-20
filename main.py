@@ -3,7 +3,7 @@ import GUI
 
 msg = {
     'ajuda':'''\nQual operação bancária deseja realizar?\nExtração de saldo ou depósito?''',
-    'msg_input':'''Para extração de saldo digite [\033[;031m0\033[;0m], para depósito digite [\033[;031m1\033[;0m]\ne para acessar o painel de controle digite [\033[;031m9\033[;0m] em seguida a senha de acesso\n\n\n\n\033[;035m>>\033[;0m\033[;034m'''
+    'msg_input':'''Para extração de saldo digite [\033[;031m0\033[;0m], para depósito digite [\033[;031m1\033[;0m]\ne para acessar o painel de controle digite [\033[;031m9\033[;0m] em seguida a senha de acesso\n\n\n\n\033[;035m>> \033[;0m\033[;034m'''
 }
 
 print('\n')
@@ -25,8 +25,10 @@ def get(): #funcao gatilho e que serve pra chamar as outras passando o parametro
         Client.le(cpf_num)
 
     elif operação == 1:
-        Client.escreve()
-
+        try:
+            Client.escreve()
+        except:
+            print('\n\033[;31mDados inseridos já existem no sistema.\nInsira os dados refenrêntes a sua conta.\033[;0m\n\n')
     elif operação == 9:
         pwdAccess = int(input('Senha de acesso: \033[;034m'))
         print('\033[;0m')
