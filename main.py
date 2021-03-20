@@ -15,7 +15,7 @@ print('''\033[1;32m██████╗ ██╗   ██╗██████
 
 print(msg['ajuda'])
 
-def get(): #funcao gatilho e que serve pra chamar as outras passando o parametro adequado #função para acessar dados dos clientes  #y = r ou w  #read ou write
+def get():
     operação = int(input(msg['msg_input']))
     print('\033[;0m')
     if operação == 0:
