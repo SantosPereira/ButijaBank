@@ -8,3 +8,5 @@ def janela(message):
     texto.pack()
 
     window.mainloop()
+
+janela('texto')
