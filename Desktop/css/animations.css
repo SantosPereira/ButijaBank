@@ -6,6 +6,8 @@
     border-radius: 50%;
     animation: spin 1s linear infinite;
     margin-left: 70%;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes spin {

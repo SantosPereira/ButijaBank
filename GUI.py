@@ -1,4 +1,5 @@
 import tkinter as tk
+import sys
 
 def janela(message):
     window = tk.Tk()
@@ -9,4 +10,6 @@ def janela(message):
 
     window.mainloop()
 
-janela('texto')
+janela('FUNCIONOU')
+# janela(sys.argv[1])
+# janela(sys.stdin)
