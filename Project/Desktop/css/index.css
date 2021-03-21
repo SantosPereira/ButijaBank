@@ -1,8 +1,31 @@
+body {
+    background-color: #14151b;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+    color: aliceblue;
+}
+
 #titulo {
-    margin-right: 5em;
+    margin-right: 30%;
     padding-left: 1%;
     font: 60px 'Segoe UI';
-    color: rgb(240, 81, 18);
-    background-color:rgb(18, 18, 151);
+    color: rgb(230, 99, 24);
+    background-color:rgb(7, 10, 179);
     border-radius: 7px;
+}
+
+#news {
+    width: 45%;
+    height: 18vw;
+    margin-bottom: 10%;
+    margin-left: 30px;
+    padding: 10px;
+    background-color: #2a2c36;
+    border-radius: 5px;
+}
+
+#acesso {
+    position: relative;
+    width: 200px;
+    padding-left: 70%;
 }
