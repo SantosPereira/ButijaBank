@@ -5,10 +5,13 @@
     <!-- <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.css" type="text/css"> -->
     <!-- <link rel="stylesheet" href="node_modules\bootstrap\dist\js\bootstrap.js" type="text/css"> -->
     <link rel="stylesheet" href="css/index.css" type="text/css">
+
+
     <title>Butija Bank</title>
 </head>
 <body>
     <h1 id="titulo"><strong>Butija Bank</strong></h1>
+    </div>        
     <div id="news">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas orci eros, semper sit amet metus sed, lobortis dignissim augue. Morbi tristique auctor dui eget maximus. Mauris placerat nec turpis at tincidunt. Fusce dignissim leo a sapien lobortis rhoncus. Phasellus eleifend convallis viverra. Curabitur dignissim vitae lacus eu viverra. Nam enim. </p>
     </div>
@@ -18,9 +21,12 @@
             <input type="text" class="btn entrada">
             <label>Senha</label>
             <input type="password" class="btn entrada">
-            <input type="submit">
+            <input type="submit" onmousedown="get()">
             <input type="reset">
         </form>
-    </div>        
+        </div>
+        <div class="loading" hidden></div>
 </body>
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </html>

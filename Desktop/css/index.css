@@ -1,3 +1,5 @@
+@import url('animations.css');
+
 body {
     background-color: #14151b;
     font-family: Tahoma, Geneva, Verdana, sans-serif;
@@ -6,11 +8,12 @@ body {
 }
 
 #titulo {
-    margin-right: 30%;
+    /* margin-right: 30%; */
+    width: 65%;
     padding-left: 1%;
     font: 60px 'Segoe UI';
-    color: rgb(230, 99, 24);
-    background-color:rgb(7, 10, 179);
+    color: #dec20b/*rgb(230, 99, 24)*/;
+    background-color: #801655;/*rgb(7, 10, 179) */
     border-radius: 7px;
 }
 
@@ -25,7 +28,6 @@ body {
 }
 
 #acesso {
-    position: relative;
     width: 200px;
     padding-left: 70%;
 }
