@@ -17,6 +17,18 @@ body {
     border-radius: 7px;
 }
 
+#acesso {
+    width: 200px;
+    margin-left: 70%;
+}
+
+.entrada{
+    background-color: #2a2c36;
+    border-color: transparent;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
 #news {
     width: 45%;
     height: 18vw;
@@ -25,16 +37,4 @@ body {
     padding: 10px;
     background-color: #2a2c36;
     border-radius: 5px;
-}
-
-#acesso {
-    width: 200px;
-    padding-left: 70%;
-}
-
-.entrada{
-    background-color: #2a2c36;
-    border-color: transparent;
-    border-radius: 5px;
-    margin-bottom: 10px;
 }
