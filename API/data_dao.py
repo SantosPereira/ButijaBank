@@ -14,7 +14,7 @@ def query(query):
     db_access.commit()
     return data
 
-class Client():
+def Client():
     def le(cpf_num):
         data = query(f'SELECT nome, cpf, saldo FROM main WHERE cpf={cpf_num};')
         data = str(data).split(',')

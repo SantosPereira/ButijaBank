@@ -1,2 +1,4 @@
 Desktop/node_modules/
 node_modules/
+__pycache__/
+API/__pycache__/
