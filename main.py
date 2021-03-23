@@ -1,5 +1,12 @@
 from API.data_dao import Client, query
 import sys
+import os
+from time import sleep
+
+try:
+    os.system('cls')
+except:
+    os.system('clear')
 
 msg = {
     'ajuda':'''\nQual operação bancária deseja realizar?\nExtração de saldo ou depósito?''',
@@ -30,6 +37,12 @@ def get():
             Client.escreve()
         except:
             print('\n\033[;31mDados inseridos já existem no sistema.\nInsira os dados refenrêntes a sua conta.\033[;0m\n\n')
+            sleep(5)
+            try:
+                os.system('cls')
+            except:
+                os.system('clear')
+            get()
     elif operação == 9:
         pwdAccess = int(input('Senha de acesso: \033[;034m'))
         print('\033[;0m')
@@ -45,6 +58,11 @@ def get():
 
     else:
         print('Erro! Digite uma opção válida')
+        sleep(5)
+        try:
+            os.system('cls')
+        except:
+            os.system('clear')
         get()
 
 get()

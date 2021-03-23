@@ -1,4 +1,5 @@
 import mysql.connector
+import os
 
 db_access = mysql.connector.connect(
     host='localhost',
@@ -14,7 +15,7 @@ def query(query):
     db_access.commit()
     return data
 
-def Client():
+class Client():
     def le(cpf_num):
         data = query(f'SELECT nome, cpf, saldo FROM main WHERE cpf={cpf_num};')
         data = str(data).split(',')
@@ -33,7 +34,15 @@ def Client():
             query(f'INSERT INTO main (nome, cpf, saldo) VALUES ("{nome}",{cpf},{saldo})')
             print('\n\033[1;32mRegistro inserido com sucesso!!\033[;0m\n\n\n')
             if input():
+                try:
+                    os.system('cls')
+                except:
+                    os.system('clear')
                 import main
         except ValueError:
             print(f'\n\033[1;31mFalha ao inserir registro.\n({ValueError})\033[;0m\nTente novamente\n\n')
+            try:
+                os.system('cls')
+            except:
+                os.system('clear')
             Client.escreve()
