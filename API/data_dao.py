@@ -3,6 +3,7 @@ import os
 
 db_access = mysql.connector.connect(
     host='localhost',
+    port='3308',
     user='root',
     database='butija_db'
 )
