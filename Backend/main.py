@@ -1,5 +1,3 @@
-from model.data_dao import Banco
-from classes import Cliente, Sistema
 import cli
 
 # ############################### Modos de execução ############################### #

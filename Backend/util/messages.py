@@ -1,6 +1,7 @@
 msg = {
     'ajuda':'''\nQual operação bancária deseja realizar?\nExtração de saldo ou depósito?''',
-    'msg_input':'''Para extração de saldo digite [\033[;031m0\033[;0m], para depósito digite [\033[;031m1\033[;0m]\ne para acessar o painel de controle digite [\033[;031m9\033[;0m] em seguida a senha de acesso\n\n\n\n\033[;035m>> \033[;0m\033[;034m'''
+    'msg_input':'''Para extração de saldo digite [\033[1;031m0\033[;0m], para depósito digite [\033[1;031m1\033[;0m]\ne para acessar o painel de controle digite [\033[1;031m9\033[;0m] em seguida a senha de acesso\n\n\n\n\033[1;035m>> \033[;0m\033[1;034m''',
+    'admin':'''\n\033[1;31m\t\t\t# ############$\t \033[1;036mAdmin\033[0;0m \t\033[1;031m$############ #\033[0;0m\n\n\nVer registros [\033[1;031m0\033[0;0m]\nApagar registros [\033[1;031m1\033[0;0m]\n\n\033[1;035m>>\033[0;0m \033[1;034m'''
 }
 
 logo = '''
